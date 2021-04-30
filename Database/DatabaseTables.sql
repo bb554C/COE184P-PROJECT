@@ -109,10 +109,11 @@ GO
 ALTER DATABASE [YearPlanner] SET  READ_WRITE 
 GO
 
+-- ====================
 USE [YearPlanner]
 GO
 
-/****** Object:  Table [dbo].[Email_Table]    Script Date: 04/29/2021 3:06:32 PM ******/
+/****** Object:  Table [dbo].[Email_Table]    Script Date: 04/30/2021 11:59:31 AM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -129,10 +130,53 @@ CREATE TABLE [dbo].[Email_Table](
 ) ON [PRIMARY]
 GO
 
+-- ====================
 USE [YearPlanner]
 GO
 
-/****** Object:  Table [dbo].[Gender_Table]    Script Date: 04/29/2021 3:07:13 PM ******/
+/****** Object:  Table [dbo].[Event_Table]    Script Date: 04/30/2021 11:59:42 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Event_Table](
+	[EventID] [int] IDENTITY(1,1) NOT NULL,
+	[UserID_FK] [int] NOT NULL,
+	[RepetitionID_FK] [int] NOT NULL,
+	[EventTitle] [varchar](200) NOT NULL,
+	[EventDescription] [varchar](max) NULL,
+	[EventDate] [date] NOT NULL,
+	[EventStartTime] [time](7) NOT NULL,
+	[EventEndTime] [time](7) NOT NULL,
+	[EventOriginalFlag] [bit] NOT NULL,
+ CONSTRAINT [PK_Event_Table] PRIMARY KEY CLUSTERED 
+(
+	[EventID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[Event_Table]  WITH CHECK ADD  CONSTRAINT [FK_Event_Table_Repetition_Table] FOREIGN KEY([RepetitionID_FK])
+REFERENCES [dbo].[Repetition_Table] ([RepetitionID])
+GO
+
+ALTER TABLE [dbo].[Event_Table] CHECK CONSTRAINT [FK_Event_Table_Repetition_Table]
+GO
+
+ALTER TABLE [dbo].[Event_Table]  WITH CHECK ADD  CONSTRAINT [FK_Event_Table_User_Table] FOREIGN KEY([UserID_FK])
+REFERENCES [dbo].[User_Table] ([UserID])
+GO
+
+ALTER TABLE [dbo].[Event_Table] CHECK CONSTRAINT [FK_Event_Table_User_Table]
+GO
+
+-- ====================
+USE [YearPlanner]
+GO
+
+/****** Object:  Table [dbo].[Gender_Table]    Script Date: 04/30/2021 11:59:58 AM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -149,10 +193,110 @@ CREATE TABLE [dbo].[Gender_Table](
 ) ON [PRIMARY]
 GO
 
+-- ====================
 USE [YearPlanner]
 GO
 
-/****** Object:  Table [dbo].[User_Table]    Script Date: 04/29/2021 3:07:31 PM ******/
+/****** Object:  Table [dbo].[Objective_Table]    Script Date: 04/30/2021 12:00:13 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Objective_Table](
+	[ObjectiveID] [int] IDENTITY(1,1) NOT NULL,
+	[UserID_FK] [int] NOT NULL,
+	[RepetitionID_FK] [int] NOT NULL,
+	[ObjectiveTitle] [varchar](100) NOT NULL,
+	[ObjectiveDescription] [varchar](max) NOT NULL,
+	[ObjectiveOriginalFlag] [bit] NOT NULL,
+ CONSTRAINT [PK_Objective_Table] PRIMARY KEY CLUSTERED 
+(
+	[ObjectiveID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[Objective_Table]  WITH CHECK ADD  CONSTRAINT [FK_Objective_Table_Repetition_Table] FOREIGN KEY([RepetitionID_FK])
+REFERENCES [dbo].[Repetition_Table] ([RepetitionID])
+GO
+
+ALTER TABLE [dbo].[Objective_Table] CHECK CONSTRAINT [FK_Objective_Table_Repetition_Table]
+GO
+
+ALTER TABLE [dbo].[Objective_Table]  WITH CHECK ADD  CONSTRAINT [FK_Objective_Table_User_Table] FOREIGN KEY([UserID_FK])
+REFERENCES [dbo].[User_Table] ([UserID])
+GO
+
+ALTER TABLE [dbo].[Objective_Table] CHECK CONSTRAINT [FK_Objective_Table_User_Table]
+GO
+
+-- ====================
+USE [YearPlanner]
+GO
+
+/****** Object:  Table [dbo].[ObjectiveLog_Table]    Script Date: 04/30/2021 12:00:25 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[ObjectiveLog_Table](
+	[ObjectiveLogID] [int] IDENTITY(1,1) NOT NULL,
+	[ObjectiveID_FK] [int] NOT NULL,
+	[UserID_FK] [int] NOT NULL,
+	[ObjectiveLogDate] [date] NOT NULL,
+	[ObjectiveLogStatus] [bit] NOT NULL,
+ CONSTRAINT [PK_ObjectiveLog_Table] PRIMARY KEY CLUSTERED 
+(
+	[ObjectiveLogID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[ObjectiveLog_Table]  WITH CHECK ADD  CONSTRAINT [FK_ObjectiveLog_Table_Objective_Table] FOREIGN KEY([ObjectiveID_FK])
+REFERENCES [dbo].[Objective_Table] ([ObjectiveID])
+GO
+
+ALTER TABLE [dbo].[ObjectiveLog_Table] CHECK CONSTRAINT [FK_ObjectiveLog_Table_Objective_Table]
+GO
+
+ALTER TABLE [dbo].[ObjectiveLog_Table]  WITH CHECK ADD  CONSTRAINT [FK_ObjectiveLog_Table_User_Table] FOREIGN KEY([UserID_FK])
+REFERENCES [dbo].[User_Table] ([UserID])
+GO
+
+ALTER TABLE [dbo].[ObjectiveLog_Table] CHECK CONSTRAINT [FK_ObjectiveLog_Table_User_Table]
+GO
+
+-- ====================
+USE [YearPlanner]
+GO
+
+/****** Object:  Table [dbo].[Repetition_Table]    Script Date: 04/30/2021 12:00:35 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Repetition_Table](
+	[RepetitionID] [int] IDENTITY(1,1) NOT NULL,
+	[RepetitionType] [varchar](100) NOT NULL,
+	[RepetitionDescription] [varchar](200) NULL,
+ CONSTRAINT [PK_Repetition_Table] PRIMARY KEY CLUSTERED 
+(
+	[RepetitionID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+-- ====================
+USE [YearPlanner]
+GO
+
+/****** Object:  Table [dbo].[User_Table]    Script Date: 04/30/2021 12:00:45 PM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -162,9 +306,9 @@ GO
 CREATE TABLE [dbo].[User_Table](
 	[UserID] [int] IDENTITY(1,1) NOT NULL,
 	[EmailID_FK] [int] NOT NULL,
-	[GenderID_FK] [int] NULL,
-	[FirstName] [varchar](100) NULL,
-	[LastName] [varchar](100) NULL,
+	[GenderID_FK] [int] NOT NULL,
+	[FirstName] [varchar](100) NOT NULL,
+	[LastName] [varchar](100) NOT NULL,
 	[Password] [varchar](200) NOT NULL,
 	[Birthday] [date] NOT NULL,
  CONSTRAINT [PK_User_Table] PRIMARY KEY CLUSTERED 
@@ -187,4 +331,3 @@ GO
 
 ALTER TABLE [dbo].[User_Table] CHECK CONSTRAINT [FK_User_Table_User_Table]
 GO
-
