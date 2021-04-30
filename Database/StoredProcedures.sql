@@ -19,7 +19,7 @@ BEGIN
 	
 	declare @EmailIDtemp int;
 
-	SELECT EmailIDtemp = ET.EmailID
+	SELECT @EmailIDtemp = ET.EmailID
 	FROM Email_Table AS ET WHERE ET.Email = @Email
 
 	INSERT INTO User_Table(EmailID_FK, GenderID_FK, FirstName, LastName, User_Table.Password, Birthday) 
