@@ -23,19 +23,16 @@
             <div class="row">
                 <div class="col-md-4 mx-auto">
                     <div class="myform form ">
-                        
+                        <form action="" name="login">
                             <div class="form-group">
                                 <input type="text" name="fName" class="form-control my-input" id="fName" placeholder="First Name">
                             </div>
                             <div class="form-group">
                                 <input type="text" name="lName" class="form-control my-input" id="lName" placeholder="Last Name">
                             </div>
-                            <select class="form-select" aria-label="Select Gender">
-                                <option selected>Gender</option>
-                                <option value="1">Male</option>
-                                <option value="2">Female</option>
-                                <option value="3">Race Car</option>
-                            </select>
+                            <div class="form-group">
+                                <input type="text" name="gender" class="form-control my-input" id="gender" placeholder="Gender">
+                            </div>
                             <div class="form-group">
                                 <input type="password" name="password" class="form-control my-input" id="password" placeholder="Password">
                             </div>
@@ -46,10 +43,10 @@
                                 <input type="date" name="birthday" id="bday" class="form-control my-input" placeholder="Birthday">
                             </div>
                             <div class="text-center ">
-                                <button type="submit" class=" btn btn-block send-button tx-tfm">Create Account</button>
+                                <button type="submit" class=" btn btn-block send-button tx-tfm" onclick="SignUpValidation()">Create Account</button>
                             </div>
-                            
-                           
+
+
                             <div class="col-md-12 text-center ">
                                 <div class="login-or">
                                     <hr class="hr-or">
@@ -64,12 +61,12 @@
                                         <input type="password" name="loginPassword" class="form-control my-input" id="logPassword" placeholder="Password">
                                     </div>
                                     <br />
-                                   
+
                                     <button onclick="location.href='homePage.html'" type="button">Log In</button>
                                 </div>
                             </div>
 
-                        
+                        </form>
                     </div>
                 </div>
             </div>
@@ -77,3 +74,98 @@
     </div>
 </body>
 </html>
+
+<script>
+
+    function SignUpValidation() {
+        var first = document.login.fName;
+        var last = document.login.lName;
+        var gen = document.login.gender;
+        var pass = document.login.password;
+        var mail = document.login.email;
+        var date = document.login.birthday;
+        if (password_validation(pass, 5, 12)) {
+            if (allLetterF(first)) {
+                if (allLetterL(last)) {
+                    if (allLetterG(gen)) {
+                        if (validateemail(mail)) {
+                            if (validatedate(date, 8, 11)) {
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
+    function password_validation(pass, mx, my) {
+        var pass_len = pass.value.length;
+        if (pass_len == 0 || pass_len >= my || pass_len < mx) {
+            alert("Password should not be empty / length be between " + mx + " to " + my);
+            pass.focus();
+            return false;
+        }
+        return true;
+    }
+
+    function allLetterF(first) {
+        var letters = /^[A-Za-z]+$/;
+        if (first.value.match(letters)) {
+            return true;
+        }
+        else {
+            alert('First Name must have alphabet characters only and must not be blank');
+            first.focus();
+            return false;
+        }
+    }
+
+    function allLetterL(last) {
+        var letters = /^[A-Za-z]+$/;
+        if (last.value.match(letters)) {
+            return true;
+        }
+        else {
+            alert('Last Name must have alphabet characters only and must not be blank');
+            last.focus();
+            return false;
+        }
+    }
+
+    function allLetterG(gen) {
+        var letters = /^[A-Za-z]+$/;
+        if (gen.value.match(letters)) {
+            return true;
+        }
+        else {
+            alert('Gender must have alphabet characters only and must not be blank');
+            gen.focus();
+            return false;
+        }
+    }
+
+    function validateemail(mail) {
+        var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if (mail.value.match(mailformat)) {
+            return true;
+        }
+        else {
+            alert("You have entered an invalid email address!");
+            mail.focus();
+            return false;
+        }
+    }
+
+    function validatedate(date, mx, my) {
+        var date_len = date.value.length;
+        if (date_len == 0 || date_len >= my || date_len < mx) {
+            alert("You have entered an invalid birthdate!");
+            date.focus();
+            return false;
+        }
+        return true;
+    }
+
+</script>
