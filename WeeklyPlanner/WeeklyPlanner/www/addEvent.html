@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+</head>
+<body>
+    <div>
+        <div class="container">
+
+            <div id="newEventHolder">
+                <span><i class="fa fa-plus"></i> Add New Event</span>
+            </div>
+
+            <div id="newEventForm">
+                <label for="event-date">Event Date</label>
+                <input type="date" name="Event Date" id="eDate" class="form-control my-input" placeholder="Event Date">
+                <input type="time" name="Event Time" id="eTime" class="form-control my-input" placeholder="Event Time">
+                <label for="event-title">Event Title</label>
+                <input type="text" name="event-title" id="eventTitleInput" maxlength="80" />
+                <label for="event-description">Description</label>
+                <textarea name="event-descripton" id="eventDescriptionInput">Event Description</textarea>
+                <button name="add-event" id="addEvent">Add New Event</button>
+                <button name="cancel-add-event" id="cancelAddEvent">Cancel</button>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- Editable table -->
+    <div class="card">
+        <h3 class="card-header text-center font-weight-bold text-uppercase py-4">
+            Events
+        </h3>
+        <div class="card-body">
+            <div id="table" class="table-editable">
+                <span class="table-add float-right mb-3 mr-2">
+                    <a href="#!" class="text-success"><i class="fas fa-plus fa-2x" aria-hidden="true"></i></a>
+                </span>
+                <table class="table table-bordered table-responsive-md table-striped text-center">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Event Title</th>
+                            <th class="text-center">Event Date</th>
+                         
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="pt-3-half" contenteditable="true">Party</td>
+                            <td class="pt-3-half" contenteditable="true">09/12/11</td>
+                          
+                            <td class="pt-3-half">
+                                <span class="table-up">
+                                    <a href="#!" class="indigo-text"><i class="fas fa-long-arrow-alt-up" aria-hidden="true"></i></a>
+                                </span>
+                                <span class="table-down">
+                                    <a href="#!" class="indigo-text"><i class="fas fa-long-arrow-alt-down" aria-hidden="true"></i></a>
+                                </span>
+                            </td>
+                            <td>
+                                <span class="table-remove">
+                                    <button type="button" class="btn btn-danger btn-rounded btn-sm my-0">
+                                        Edit
+                                    </button>
+                                </span>
+                            </td>
+                        </tr>
+                        <!-- This is our clonable table line -->
+                        <tr>
+                            <td class="pt-3-half" contenteditable="true">Bday</td>
+                            <td class="pt-3-half" contenteditable="true">06/21/21</td>
+                          
+                            <td class="pt-3-half">
+                                <span class="table-up">
+                                    <a href="#!" class="indigo-text"><i class="fas fa-long-arrow-alt-up" aria-hidden="true"></i></a>
+                                </span>
+                                <span class="table-down">
+                                    <a href="#!" class="indigo-text"><i class="fas fa-long-arrow-alt-down" aria-hidden="true"></i></a>
+                                </span>
+                            </td>
+                            <td>
+                                <span class="table-remove">
+                                    <button type="button" class="btn btn-danger btn-rounded btn-sm my-0">
+                                        Edit
+                                    </button>
+                                </span>
+                            </td>
+                        </tr>
+                        <!-- This is our clonable table line -->
+                        <tr>
+                            <td class="pt-3-half" contenteditable="true">Exam</td>
+                            <td class="pt-3-half" contenteditable="true">12/21/21</td>
+                      
+                            <td class="pt-3-half">
+                                <span class="table-up">
+                                    <a href="#!" class="indigo-text"><i class="fas fa-long-arrow-alt-up" aria-hidden="true"></i></a>
+                                </span>
+                                <span class="table-down">
+                                    <a href="#!" class="indigo-text"><i class="fas fa-long-arrow-alt-down" aria-hidden="true"></i></a>
+                                </span>
+                            </td>
+                            <td>
+                                <span class="table-remove">
+                                    <button type="button" class="btn btn-danger btn-rounded btn-sm my-0">
+                                        Edit
+                                    </button>
+                                </span>
+                            </td>
+                        </tr>
+                        <!-- This is our clonable table line -->
+                        <tr class="hide">
+                            <td class="pt-3-half" contenteditable="true">Xmas</td>
+                            <td class="pt-3-half" contenteditable="true">12/25/21</td>
+                  
+                            <td class="pt-3-half">
+                                <span class="table-up">
+                                    <a href="#!" class="indigo-text"><i class="fas fa-long-arrow-alt-up" aria-hidden="true"></i></a>
+                                </span>
+                                <span class="table-down">
+                                    <a href="#!" class="indigo-text"><i class="fas fa-long-arrow-alt-down" aria-hidden="true"></i></a>
+                                </span>
+                            </td>
+                            <td>
+                                <span class="table-remove">
+                                    <button type="button" class="btn btn-danger btn-rounded btn-sm my-0">
+                                        Edit
+                                    </button>
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- Editable table -->
+    <script type="text/javascript" src="scripts/dispTable.js"></script>
+</body>
+</html>
