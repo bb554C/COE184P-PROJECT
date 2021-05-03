@@ -26,7 +26,7 @@
                 <input type="text" name="event-title" id="eventTitleInput" maxlength="80" />
                 <label for="event-description">Description</label>
                 <textarea name="event-descripton" id="eventDescriptionInput">Event Description</textarea>
-                <button name="add-event" id="addEvent">Add New Event</button>
+                <button name="add-event" id="addEvent" onclick="addevent()">Add New Event</button>
                 <button name="cancel-add-event" id="cancelAddEvent">Cancel</button>
             </div>
 
@@ -49,6 +49,7 @@
                             <th class="text-center">Event Title</th>
                             <th class="text-center">Event Date</th>
                             <th class="text-center">Event Time</th>
+
                         </tr>
                     </thead>
                     <tbody>
@@ -56,8 +57,7 @@
                             <td class="pt-3-half" contenteditable="true">Party</td>
                             <td class="pt-3-half" contenteditable="true">09/12/11</td>
                             <td class="pt-3-half" contenteditable="true">10:00</td>
-                                
-                        
+
                             <td>
                                 <span class="table-remove">
                                     <button type="button" class="btn btn-danger btn-rounded btn-sm my-0">
@@ -70,9 +70,7 @@
                         <tr>
                             <td class="pt-3-half" contenteditable="true">Bday</td>
                             <td class="pt-3-half" contenteditable="true">06/21/21</td>
-
                             <td class="pt-3-half" contenteditable="true">10:00</td>
-
 
                             <td>
                                 <span class="table-remove">
@@ -86,9 +84,7 @@
                         <tr>
                             <td class="pt-3-half" contenteditable="true">Exam</td>
                             <td class="pt-3-half" contenteditable="true">12/21/21</td>
-
                             <td class="pt-3-half" contenteditable="true">10:00</td>
-
 
                             <td>
                                 <span class="table-remove">
@@ -102,9 +98,7 @@
                         <tr class="hide">
                             <td class="pt-3-half" contenteditable="true">Xmas</td>
                             <td class="pt-3-half" contenteditable="true">12/25/21</td>
-
                             <td class="pt-3-half" contenteditable="true">10:00</td>
-
 
                             <td>
                                 <span class="table-remove">
@@ -120,6 +114,55 @@
         </div>
     </div>
     <!-- Editable table -->
-  
+    <script type="text/javascript" src="scripts/dispTable.js"></script>
 </body>
 </html>
+
+
+<script>
+
+    function addevent() {
+        var dte = document.getElementById("eDate");
+        var tme = document.getElementById("eTime");
+        var title = document.getElementById("eventTitleInput");
+
+        if (validatedate(dte, 8, 11)) {
+            if (validatetime(tme, 5, 10)) {
+                if (validatetitle(title, 1, 10000)) {
+
+                }
+
+            }
+
+        }
+        return false;
+    }
+
+    function validatedate(dte, mx, my) {
+        var dte_len = dte.value.length;
+        if (dte_len == 0 || dte_len >= my || dte_len < mx) {
+            alert("Invalid Date");
+            return false;
+        }
+        return true;
+    }
+
+    function validatetime(tme, mx, my) {
+        var tme_len = tme.value.length;
+        if (tme_len == 0 || tme_len >= my || tme_len < mx) {
+            alert("Invalid Time");
+            return false;
+        }
+        return true;
+    }
+
+    function validatetitle(title, mx, my) {
+        var title_len = title.value.length;
+        if (title_len == 0 || title_len >= my || title_len < mx) {
+            alert("Event Title must not be empty.")
+            return false;
+        }
+        return true;
+    }
+
+</script>
