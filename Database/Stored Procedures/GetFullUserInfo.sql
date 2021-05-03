@@ -1,0 +1,18 @@
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE GetFullUserInfo
+	@UserID int,
+AS
+BEGIN
+	SET NOCOUNT ON;
+	SELECT UT.FirstName, UT.LastName, GT.GenderType, UT.Birthday, ET.Email
+	FROM User_Table AS UT
+	FULL OUTER JOIN Email_Table AS ET
+	ON UT.EmailID_FK = ET.EmailID
+	FULL OUTER JOIN Gender_Table AS GT
+	ON UT.GenderID_FK = GT.GenderID
+	WHERE UT.UserID = @UserID
+END
+GO
