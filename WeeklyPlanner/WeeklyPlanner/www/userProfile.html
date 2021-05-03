@@ -21,12 +21,49 @@
         <input type="text" aria-label="Last name" class="form-control" placeholder="Last Name" readonly>
         <input type="date" class="form-control" readonly />
         <input type="email" class="form-control" placeholder="Email Address" readonly />
-        <input type="password" class="form-control" placeholder="Password" />
+        <input type="password" class="form-control" placeholder="Password" id="userpass"/>
         <input type="text" name="userGender" class="form-control my-input" id="userGender" placeholder="Gender">
 
 
-        <input type="submit" class="form-control" value="Edit" />
+        <input type="submit" class="form-control" value="Edit" onclick="edit()"/>
     </div>
 </div></div>
 </body>
 </html>
+
+<script>
+
+    function edit() {
+        var upass = document.getElementById("userpass");
+        var uGen = document.getElementById("userGender");
+
+        if (passval(upass, 5, 12)) {
+            if (genval(uGen)) {
+
+            }
+        }
+        return false;
+    }
+
+    function passval(upass, mx, my) {
+        var upass_len = upass.value.length;
+        if (upass_len == 0 || upass_len >= my || upass_len < mx) {
+            alert("Password should not be empty / length be between " + mx + " to " + my);
+            return false;
+        }
+        return true;
+    }
+
+    function genval(ugen) {
+        var letters = /^[A-Za-z]+$/;
+        if (ugen.value.match(letters)) {
+            return true;
+        }
+        else {
+            alert('Gender must have alphabet characters only and must not be blank');
+            return false;
+        }
+    }
+
+
+</script>
