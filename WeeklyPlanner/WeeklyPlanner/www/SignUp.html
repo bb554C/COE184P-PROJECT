@@ -167,5 +167,22 @@
         }
         return true;
     }
+    function btnGetHelloParam_OnClick() {
+                var varInput = document.getElementById('txtParamInput').value;
 
+                $.ajax({
+                    type: 'POST',
+                    url: 'http://127.0.0.1/COE184P/Service.svc/HelloParam',
+                    data: '{"Name":"' + varInput.trim() + '"}',
+                    contentType: 'application/json;charset=utf-8',
+                    dataType: 'json',
+                    processdata: true,
+                    success: function (result) {
+                        alert(result.HelloParamResult);
+                    },
+                    error: function (msg) {
+                        alert(msg.responseText);
+                    }
+                });
+            }
 </script>

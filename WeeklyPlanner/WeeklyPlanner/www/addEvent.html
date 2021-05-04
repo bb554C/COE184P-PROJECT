@@ -26,7 +26,7 @@
                 <input type="text" name="event-title" id="eventTitleInput" maxlength="80" />
                 <label for="event-description">Description</label>
                 <textarea name="event-descripton" id="eventDescriptionInput">Event Description</textarea>
-                <button name="add-event" id="addEvent" onclick="addevent()">Add New Event</button>
+                <button  name="add-event" id="addEvent" onclick="btnGetHelloParam_OnClick()">Add New Event</button>
                 <button name="cancel-add-event" id="cancelAddEvent">Cancel</button>
             </div>
 
@@ -170,5 +170,22 @@
         }
         return true;
     }
+    function btnGetHelloParam_OnClick() {
+        var varInput = document.getElementById('txtParamInput').value;
 
+        $.ajax({
+            type: 'POST',
+            url: 'http://127.0.0.1/COE184P/Service.svc/HelloParam',
+            data: '{"Name":"' + varInput.trim() + '"}',
+            contentType: 'application/json;charset=utf-8',
+            dataType: 'json',
+            processdata: true,
+            success: function (result) {
+                alert(result.HelloParamResult);
+            },
+            error: function (msg) {
+                alert(msg.responseText);
+            }
+        });
+    }
 </script>
