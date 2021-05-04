@@ -80,8 +80,8 @@
                     </tbody>
                 </table>
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Title" aria-label="Obj Title" aria-describedby="button-addon2">
-                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Add Objective</button>
+                    <input type="text" class="form-control" placeholder="Title" aria-label="Obj Title" aria-describedby="button-addon2" id="objective">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="addobjective()">Add Objective</button>
                 </div>
             </div>
             </div>
@@ -89,3 +89,24 @@
 
 </body>
 </html>
+
+<script>
+    function addobjective() {
+        var obj = document.getElementById("objective"); 
+
+        if (valtitle(obj, 1, 10000)) {
+
+        }
+        return false;
+    }
+
+    function valtitle(obj, mx, my) {
+        var obj_len = obj.value.length;
+        if (obj_len == 0 || obj_len >= my || obj_len < mx) {
+            alert("Objective must not be empty.")
+            return false;
+        }
+        return true;
+    }
+
+</script>
