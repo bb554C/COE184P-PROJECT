@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\COE184P_Project\COE184P_Project\obj\Release\Package\PackageTmp" />
+  <setAcl path="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\COE184P_Project\COE184P_Project\obj\Release\Package\PackageTmp" setAclResourceType="Directory" />
+  <setAcl path="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\COE184P_Project\COE184P_Project\obj\Release\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
+</sitemanifest>
