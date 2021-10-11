@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>BAIRD-TUFLAPTOP</Machine>
+    <WindowsUser>BAIRD</WindowsUser>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetOsVersion>10.0</TargetOsVersion>
+    <TargetOsDescription>Windows 10.0</TargetOsDescription>
+    <SolutionConfiguration>debug|x64</SolutionConfiguration>
+    <PackageArchitecture>x64</PackageArchitecture>
+    <PackageIdentityName>e6fb89f0-2a44-11ec-9bba-c578c480908f</PackageIdentityName>
+    <PackageIdentityPublisher>CN=Apache Cordova Team</PackageIdentityPublisher>
+    <IntermediateOutputPath>C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\build\windows\bld\</IntermediateOutputPath>
+    <RemoteDeploymentType></RemoteDeploymentType>
+    <PackageRegistrationPath></PackageRegistrationPath>
+    <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
+    <DeployOptionalPackages>false</DeployOptionalPackages>
+    <WindowsSdkPath></WindowsSdkPath>
+    <LayoutDir>C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\build\windows\debug\x64\win10\AppX</LayoutDir>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\build\windows\debug\x64\win10\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\images\SplashScreen.scale-100.png">
+      <PackagePath>images\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\images\Square150x150Logo.scale-100.png">
+      <PackagePath>images\Square150x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\images\Square30x30Logo.scale-100.png">
+      <PackagePath>images\Square30x30Logo.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\images\Square310x310Logo.scale-100.png">
+      <PackagePath>images\Square310x310Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\images\Square44x44Logo.scale-100.png">
+      <PackagePath>images\Square44x44Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\images\Square70x70Logo.scale-100.png">
+      <PackagePath>images\Square70x70Logo.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\images\Square71x71Logo.scale-100.png">
+      <PackagePath>images\Square71x71Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\images\StoreLogo.scale-100.png">
+      <PackagePath>images\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\images\Wide310x150Logo.scale-100.png">
+      <PackagePath>images\Wide310x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\images\cordova.png">
+      <PackagePath>www\images\cordova.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\AppLoading.html">
+      <PackagePath>www\AppLoading.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\EventAddPage.html">
+      <PackagePath>www\EventAddPage.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\EventEditPage.html">
+      <PackagePath>www\EventEditPage.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\EventPage.html">
+      <PackagePath>www\EventPage.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\EventSearch.html">
+      <PackagePath>www\EventSearch.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\HomePage.html">
+      <PackagePath>www\HomePage.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\Login.html">
+      <PackagePath>www\Login.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\ObjectiveAddPage.html">
+      <PackagePath>www\ObjectiveAddPage.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\ObjectivePage.html">
+      <PackagePath>www\ObjectivePage.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\setObj.html">
+      <PackagePath>www\setObj.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\SignUp.html">
+      <PackagePath>www\SignUp.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\UserProfilePage.html">
+      <PackagePath>www\UserProfilePage.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\cordova-js-src\confighelper.js">
+      <PackagePath>www\cordova-js-src\confighelper.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\cordova-js-src\exec.js">
+      <PackagePath>www\cordova-js-src\exec.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\cordova-js-src\platform.js">
+      <PackagePath>www\cordova-js-src\platform.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\cordova-js-src\splashscreen.js">
+      <PackagePath>www\cordova-js-src\splashscreen.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\cordova.js">
+      <PackagePath>www\cordova.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\cordova_plugins.js">
+      <PackagePath>www\cordova_plugins.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\lib\require.2.1.8.js">
+      <PackagePath>www\lib\require.2.1.8.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\scripts\application.js">
+      <PackagePath>www\scripts\application.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\scripts\index.js">
+      <PackagePath>www\scripts\index.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\scripts\jQuery\jquery-1.11.3.min.js">
+      <PackagePath>www\scripts\jQuery\jquery-1.11.3.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\scripts\platformOverrides.js">
+      <PackagePath>www\scripts\platformOverrides.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\scripts\startup.js">
+      <PackagePath>www\scripts\startup.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\scripts\winstore-jscompat.js">
+      <PackagePath>www\scripts\winstore-jscompat.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\WinJS\js\base.js">
+      <PackagePath>www\WinJS\js\base.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\css\index.css">
+      <PackagePath>www\css\index.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\css\splashscreen.css">
+      <PackagePath>www\css\splashscreen.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\scripts\application.js.map">
+      <PackagePath>www\scripts\application.js.map</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\scripts\startup.js.map">
+      <PackagePath>www\scripts\startup.js.map</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\config.xml">
+      <PackagePath>config.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\build\windows\debug\x64\win10\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

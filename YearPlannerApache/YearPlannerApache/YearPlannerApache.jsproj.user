@@ -8,4 +8,17 @@
     <DebuggerFlavor>AndroidEmulator</DebuggerFlavor>
     <AndroidEmulatorID>AndroidInstallBuildTools;Install Android build tools...</AndroidEmulatorID>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Windows-x86'">
+    <DebuggerFlavor>WindowsMobileDevice</DebuggerFlavor>
+    <WindowsMobileEmulatorID>WindowsPhoneInstallEmulators;Install Windows Phone Emulators...</WindowsMobileEmulatorID>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Windows-ARM'">
+    <DebuggerFlavor>WindowsMobileDevice</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Windows-x64'">
+    <DebuggerFlavor>WindowsLocal</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|iOS'">
+    <DebuggerFlavor>iOSEmulatoriPhone6</DebuggerFlavor>
+  </PropertyGroup>
 </Project>

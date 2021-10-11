@@ -185,6 +185,31 @@ namespace COE184P_Project
             }
             return DataSetToJSONWithJSONNet(ds);
         }
+        [WebMethod]
+        [ScriptMethod(UseHttpGet = false)]
+        public string GetEventSearchList(string UserID, string EventTitle)
+        {
+            int uID = Convert.ToInt32(UserID);
+            var ds = new DataSet();
+            using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["con"].ConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand("dbo.GetEventSearchList", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@UserID", uID);
+                    cmd.Parameters.AddWithValue("@EventTitle", EventTitle);
+                    if (con.State != ConnectionState.Open)
+                    {
+                        con.Open();
+                    }
+                    SqlDataAdapter adp = new SqlDataAdapter();
+                    adp.SelectCommand = cmd;
+                    adp.Fill(ds);
+                }
+                connectionClose(con);
+            }
+            return DataSetToJSONWithJSONNet(ds);
+        }
         public string DataTableToJSONWithJSONNet(DataTable table)
         {
             string JSONString = string.Empty;
@@ -446,6 +471,38 @@ namespace COE184P_Project
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@UserID", UserIDtmp);
                     cmd.Parameters.AddWithValue("@Date", Datetmp);
+                    if (con.State != ConnectionState.Open)
+                    {
+                        con.Open();
+                    }
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        reader.Read();
+                        count = reader.GetInt32(0);
+                    }
+                    else
+                    {
+                        count = 0;
+                    }
+                }
+                connectionClose(con);
+            }
+            return count.ToString();
+        }
+        [WebMethod]
+        [ScriptMethod(UseHttpGet = false)]
+        public string EventSearchCount(string UserID, string EventTitle)
+        {
+            int count = 0;
+            int UserIDtmp = Convert.ToInt32(UserID);
+            using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["con"].ConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand("dbo.EventSearchCount", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@UserID", UserIDtmp);
+                    cmd.Parameters.AddWithValue("@EventTitle", EventTitle);
                     if (con.State != ConnectionState.Open)
                     {
                         con.Open();

@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>BAIRD-TUFLAPTOP</Machine>
+    <WindowsUser>BAIRD</WindowsUser>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetOsVersion>10.0</TargetOsVersion>
+    <TargetOsDescription>Windows 10.0</TargetOsDescription>
+    <SolutionConfiguration>debug|x64</SolutionConfiguration>
+    <PackageArchitecture>x64</PackageArchitecture>
+    <PackageIdentityName>e6fb89f0-2a44-11ec-9bba-c578c480908f</PackageIdentityName>
+    <PackageIdentityPublisher>CN=Apache Cordova Team</PackageIdentityPublisher>
+    <IntermediateOutputPath>C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\build\windows\bld\</IntermediateOutputPath>
+    <RemoteDeploymentType>
+    </RemoteDeploymentType>
+    <PackageRegistrationPath>
+    </PackageRegistrationPath>
+    <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
+    <DeployOptionalPackages>false</DeployOptionalPackages>
+    <WindowsSdkPath>
+    </WindowsSdkPath>
+    <LayoutDir>C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\build\windows\debug\x64\win10\AppX</LayoutDir>
+    <RegisteredManifestChecksum>97CDB0472664A6A7327CF94DC39DCDD3C5D168E0D75298F8720DEB30378ED9DC</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>io.cordova.myappc6d502_1.0.0.0_x64__h35559jr9hy9m</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>io.cordova.myappc6d502_h35559jr9hy9m!io.cordova.myappc6d502</RegisteredUserModeAppID>
+    <RegisteredPackageID>io.cordova.myappc6d502</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=Apache Cordova Team</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\build\windows\debug\x64\win10\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-10-11T07:26:58.798</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\images\SplashScreen.scale-100.png">
+      <PackagePath>images\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-10-11T03:39:57.998</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\images\Square150x150Logo.scale-100.png">
+      <PackagePath>images\Square150x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-10-11T03:39:58.005</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\images\Square30x30Logo.scale-100.png">
+      <PackagePath>images\Square30x30Logo.scale-100.png</PackagePath>
+      <Modified>2021-10-11T03:39:58.013</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\images\Square310x310Logo.scale-100.png">
+      <PackagePath>images\Square310x310Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-10-11T03:39:58.016</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\images\Square44x44Logo.scale-100.png">
+      <PackagePath>images\Square44x44Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-10-11T03:39:58.020</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\images\Square70x70Logo.scale-100.png">
+      <PackagePath>images\Square70x70Logo.scale-100.png</PackagePath>
+      <Modified>2021-10-11T03:39:58.026</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\images\Square71x71Logo.scale-100.png">
+      <PackagePath>images\Square71x71Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-10-11T03:39:58.031</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\images\StoreLogo.scale-100.png">
+      <PackagePath>images\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-10-11T03:39:58.040</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\images\Wide310x150Logo.scale-100.png">
+      <PackagePath>images\Wide310x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-10-11T03:39:58.048</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\images\cordova.png">
+      <PackagePath>www\images\cordova.png</PackagePath>
+      <Modified>2021-10-11T03:39:57.892</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\AppLoading.html">
+      <PackagePath>www\AppLoading.html</PackagePath>
+      <Modified>2021-10-11T04:48:09.558</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\EventAddPage.html">
+      <PackagePath>www\EventAddPage.html</PackagePath>
+      <Modified>2021-10-11T03:39:57.815</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\EventEditPage.html">
+      <PackagePath>www\EventEditPage.html</PackagePath>
+      <Modified>2021-10-11T03:39:57.819</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\EventPage.html">
+      <PackagePath>www\EventPage.html</PackagePath>
+      <Modified>2021-10-11T07:25:10.144</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\EventSearch.html">
+      <PackagePath>www\EventSearch.html</PackagePath>
+      <Modified>2021-10-11T07:23:22.718</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\HomePage.html">
+      <PackagePath>www\HomePage.html</PackagePath>
+      <Modified>2021-10-11T07:25:10.146</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\Login.html">
+      <PackagePath>www\Login.html</PackagePath>
+      <Modified>2021-10-11T03:39:57.837</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\ObjectiveAddPage.html">
+      <PackagePath>www\ObjectiveAddPage.html</PackagePath>
+      <Modified>2021-10-11T03:39:57.843</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\ObjectivePage.html">
+      <PackagePath>www\ObjectivePage.html</PackagePath>
+      <Modified>2021-10-11T03:39:57.848</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\setObj.html">
+      <PackagePath>www\setObj.html</PackagePath>
+      <Modified>2021-10-11T03:39:57.952</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\SignUp.html">
+      <PackagePath>www\SignUp.html</PackagePath>
+      <Modified>2021-10-11T03:39:57.853</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\UserProfilePage.html">
+      <PackagePath>www\UserProfilePage.html</PackagePath>
+      <Modified>2021-10-11T03:39:57.862</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\cordova-js-src\confighelper.js">
+      <PackagePath>www\cordova-js-src\confighelper.js</PackagePath>
+      <Modified>2021-10-11T07:26:56.052</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\cordova-js-src\exec.js">
+      <PackagePath>www\cordova-js-src\exec.js</PackagePath>
+      <Modified>2021-10-11T07:26:56.053</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\cordova-js-src\platform.js">
+      <PackagePath>www\cordova-js-src\platform.js</PackagePath>
+      <Modified>2021-10-11T07:26:56.054</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\cordova-js-src\splashscreen.js">
+      <PackagePath>www\cordova-js-src\splashscreen.js</PackagePath>
+      <Modified>2021-10-11T07:26:56.055</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\cordova.js">
+      <PackagePath>www\cordova.js</PackagePath>
+      <Modified>2021-10-11T03:39:57.879</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\cordova_plugins.js">
+      <PackagePath>www\cordova_plugins.js</PackagePath>
+      <Modified>2021-10-11T07:26:56.056</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\lib\require.2.1.8.js">
+      <PackagePath>www\lib\require.2.1.8.js</PackagePath>
+      <Modified>2021-10-11T03:39:57.906</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\scripts\application.js">
+      <PackagePath>www\scripts\application.js</PackagePath>
+      <Modified>2021-10-11T07:26:56.059</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\scripts\index.js">
+      <PackagePath>www\scripts\index.js</PackagePath>
+      <Modified>2021-10-11T04:07:26.051</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\scripts\jQuery\jquery-1.11.3.min.js">
+      <PackagePath>www\scripts\jQuery\jquery-1.11.3.min.js</PackagePath>
+      <Modified>2021-10-11T03:39:57.926</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\scripts\platformOverrides.js">
+      <PackagePath>www\scripts\platformOverrides.js</PackagePath>
+      <Modified>2021-10-11T03:39:57.928</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\scripts\startup.js">
+      <PackagePath>www\scripts\startup.js</PackagePath>
+      <Modified>2021-10-11T07:26:56.061</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\scripts\winstore-jscompat.js">
+      <PackagePath>www\scripts\winstore-jscompat.js</PackagePath>
+      <Modified>2021-10-11T03:39:57.949</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\WinJS\js\base.js">
+      <PackagePath>www\WinJS\js\base.js</PackagePath>
+      <Modified>2021-10-11T03:39:57.868</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\css\index.css">
+      <PackagePath>www\css\index.css</PackagePath>
+      <Modified>2021-10-11T07:26:56.056</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\css\splashscreen.css">
+      <PackagePath>www\css\splashscreen.css</PackagePath>
+      <Modified>2021-10-11T03:39:57.885</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\scripts\application.js.map">
+      <PackagePath>www\scripts\application.js.map</PackagePath>
+      <Modified>2021-10-11T03:39:57.915</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\www\scripts\startup.js.map">
+      <PackagePath>www\scripts\startup.js.map</PackagePath>
+      <Modified>2021-10-11T03:39:57.940</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\config.xml">
+      <PackagePath>config.xml</PackagePath>
+      <Modified>2021-10-11T07:26:55.945</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BAIRD\Documents\GitHub\COE184P-PROJECT\YearPlannerApache\YearPlannerApache\platforms\windows\build\windows\debug\x64\win10\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2021-10-11T07:26:58.628</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

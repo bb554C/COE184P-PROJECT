@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <title>Sign Up</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <div>
+        <button onclick="location.href='AppLoading.html'" type="button" class="btn btn-danger">RETURN</button>
+    </div>
+    <div class="mx-auto text-center">
+        <h1 class="wv-heading--title">Log In</h1>
+        <div class="mb-3">
+            <input type="email" name="loginEmail" class="form-control my-input" id="logEmail" placeholder="Email">
+        </div>
+        <div class="mb-3">
+            <input type="password" name="loginPassword" class="form-control my-input" id="logPassword" placeholder="Password">
+        </div>
+        <div>
+            <button type="button" class="btn btn-primary" onclick="LoginFunc()">Log In</button>
+        </div>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+    <script type="text/javascript" data-main="scripts/startup" src="lib/require.2.1.8.js" async></script>
+    <script src="scripts/jQuery/jquery-1.11.3.min.js"></script>
+    <script>
+        function ButtonCheck() {
+            $.ajax({
+                type: "GET",
+                url: "http://192.168.1.3/Planner.asmx/HelloWorld",
+                data: '{}',
+                contentType: 'application/json;charset=utf-8',
+                dataType: 'json',
+                success: function (result) {
+                    alert(result.d);
+                },
+                error: function (msg) {
+                    alert(msg.responseText);
+                }
+            });
+        }
+        function LoginFunc() {
+            var json = "{ 'Email': '" + document.getElementById('logEmail').value + "', 'Password': '" + document.getElementById('logPassword').value + "' }";
+            $.ajax({
+                type: "POST",
+                url: "http://192.168.1.3/Planner.asmx/Login",
+                data: json,
+                contentType: 'application/json;charset=utf-8',
+                dataType: 'json',
+                processdata: true,
+                success: function (result) {
+                    var str = result.d;
+                    var check = JSON.parse(str);
+                    if (check != "INVALID") {
+                        document.cookie = "UserID=" + check;
+                        window.location = 'homePage.html';
+                    }
+                    else {
+                        document.getElementById('logPassword').style.borderColor = "red";
+                        document.getElementById('logEmail').style.borderColor = "red";
+                        //alert("INVALID ACCOUNT OR PASSWORD");
+                    }
+                },
+                error: function (msg) {
+                    alert(msg.responseText);
+                }
+            });
+        }
+    </script>
+</body>
+</html>
